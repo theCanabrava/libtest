@@ -34,7 +34,7 @@ steps:
   displayName: Universal Publish
   inputs:
     command: publish
-    publishDirectory: $(System.DefaultWorkingDirectory)/dist
+    publishDirectory: $(System.DefaultWorkingDirectory)
     vstsFeedPublish: 'Perspective Sketch/libtest-feed'
-    vstsFeedPackagePublish: 'RNApp'
+    vstsFeedPackagePublish: 'rnapp'
     packagePublishDescription: 'Javascript bundle files'
