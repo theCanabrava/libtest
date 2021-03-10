@@ -23,18 +23,5 @@ steps:
 
     npx expo export -p https://www.site.com/libtest -f
     npm run logdist
+    npm run upload
   displayName: 'npm install and export'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: 'RNApp'
-
-- task: UniversalPackages@0
-  displayName: Universal Publish
-  inputs:
-    command: publish
-    publishDirectory: $(System.DefaultWorkingDirectory)
-    vstsFeedPublish: 'Perspective Sketch/libtest-feed'
-    vstsFeedPackagePublish: 'rnapp'
-    packagePublishDescription: 'Javascript bundle files'
