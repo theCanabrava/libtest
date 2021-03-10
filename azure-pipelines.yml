@@ -19,6 +19,22 @@ steps:
     npm install
     npm install -g expo-cli
 
+    npm run logdist
+
     npx expo export -p https://www.site.com/libtest -f
-    cat dist/android-index.json
+    npm run logdist
   displayName: 'npm install and export'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'RNApp'
+
+- task: UniversalPackages@0
+  displayName: Universal Publish
+  inputs:
+    command: publish
+    publishDirectory: $(System.DefaultWorkingDirectory)
+    vstsFeedPublish: 'Perspective Sketch/libtest-feed'
+    vstsFeedPackagePublish: 'rnapp'
+    packagePublishDescription: 'Javascript bundle files'
