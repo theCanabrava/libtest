@@ -5,7 +5,7 @@ import NavigationRoot from './src/navigation/NavigationRoot';
 import LoadApp from './src/startup/LoadApp';
 import Updater from './src/startup/Updater';
 
-export default () =>
+const App =  () =>
 (
     <AuthStore>
         <RestrictedStore>
@@ -14,3 +14,5 @@ export default () =>
         </RestrictedStore>
     </AuthStore>
 )
+
+export default App;

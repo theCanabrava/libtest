@@ -6,8 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start --port=8088",
-    "test": "jest",
-    "lint": "eslint ."
+    "test": "jest --collectCoverage",
+    "lint": "eslint -f json -o report.json src/**/*.js"
   },
   "dependencies": {
     "@invertase/react-native-apple-authentication": "^2.1.0",
@@ -19,6 +19,7 @@
     "@react-navigation/stack": "^5.14.0",
     "axios": "^0.21.1",
     "expo-updates": "^0.4.1",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
@@ -30,11 +31,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.12.11",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.5.1",
-    "jest": "^25.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.5.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^25.5.4",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1"
   },

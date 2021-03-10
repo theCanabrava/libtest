@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create
-(
+export default StyleSheet.create(
+    
     {
         container:
         {
@@ -78,6 +78,6 @@ export default StyleSheet.create
             marginVertical: 8,
             height: 40,
             alignSelf: 'center'
-        }
+        },
     }
 )

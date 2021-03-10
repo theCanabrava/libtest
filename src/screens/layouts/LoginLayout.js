@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import PropTypes from 'prop-types';
 import { Text, View, KeyboardAvoidingView, Platform } from 'react-native';
 import { GoogleSigninButton } from '@react-native-community/google-signin';
 import { AppleButton } from '@invertase/react-native-apple-authentication';
@@ -12,7 +13,7 @@ import ScreenContainer from '../components/ScreenContainer';
 
 
 
-export default ({onSubmit, error, loading, onGoogleSignIn, onAppleSignIn}) =>
+const LoginLayout = ({onSubmit, error, loading, onGoogleSignIn, onAppleSignIn}) =>
 {
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
@@ -76,3 +77,14 @@ export default ({onSubmit, error, loading, onGoogleSignIn, onAppleSignIn}) =>
 
     return screen;
 }
+
+LoginLayout.propTypes =
+{
+    onSubmit: PropTypes.func.isRequired, 
+    error: PropTypes.string, 
+    loading: PropTypes.bool, 
+    onGoogleSignIn: PropTypes.func.isRequired, 
+    nAppleSignIn: PropTypes.func.isRequired
+}
+
+export default LoginLayout;

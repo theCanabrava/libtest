@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { useEffect } from 'react';
 import RestrictedContext from '../contexts/RestrictedContext';
 import BResourcePresenter from './layouts/BResourceLayout';
-import strings from './strings';
+import NavigationProps from './proptypes/NavigationProps';
 
-export default ({navigation}) =>
+const BResourceContainer = ({navigation}) =>
 {
-    const restricted = useContext(RestrictedContext);
+    let restricted = useContext(RestrictedContext);
     useEffect(() => { restricted.getContent('B');}, []);
 
     const screen =
@@ -18,3 +19,6 @@ export default ({navigation}) =>
 
     return screen;
 }
+
+BResourceContainer.propTypes = NavigationProps;
+export default BResourceContainer;

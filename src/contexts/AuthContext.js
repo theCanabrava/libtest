@@ -28,7 +28,7 @@ export class AuthStore extends React.Component
     {
         const userData = await UserData.read();
         this.setState({...userData});
-        if(userData.token !== '') await Auth.setToken(userData.token);
+        if(userData.token !== '') Auth.setToken(userData.token);
     }
 
     render = () =>

@@ -15,8 +15,8 @@ const UserData =
         try
         {
             const raw = await AsyncStorage.getItem(key);
-            const data = raw !== null ? JSON.parse(raw) : defaultData;
-            return data
+            const data = raw != null ? JSON.parse(raw) : defaultData;
+            return data;
         }
         catch(err)
         {

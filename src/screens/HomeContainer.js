@@ -2,8 +2,9 @@ import React, {useContext} from 'react';
 import AuthContext from '../contexts/AuthContext';
 import HomeLayout from './layouts/HomeLayout';
 import strings from './strings';
+import NavigationProps from './proptypes/NavigationProps';
 
-export default ({navigation}) =>
+const HomeContainer = ({navigation}) =>
 {
     const auth = useContext(AuthContext);
     
@@ -24,3 +25,7 @@ export default ({navigation}) =>
 
     return screen;
 }
+
+HomeContainer.propTypes = NavigationProps;
+
+export default HomeContainer;

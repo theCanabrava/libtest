@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 import Button from '../components/Button';
 import ScreenContainer from '../components/ScreenContainer';
 import Card from '../components/Card';
 import strings from '../strings';
 
-export default ({onClickBack}) =>
+const AResourceLayout = ({onClickBack}) =>
 (
     <ScreenContainer>
         <Card>
@@ -18,3 +19,9 @@ export default ({onClickBack}) =>
         </Card>
     </ScreenContainer>
 )
+
+AResourceLayout.propTypes =
+{
+    onClickBack: PropTypes.func.isRequired
+}
+export default AResourceLayout;

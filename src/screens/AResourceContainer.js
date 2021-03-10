@@ -1,10 +1,13 @@
 import React from 'react';
 import AResourceLayout from './layouts/AResourceLayout';
-import strings from './strings';
+import NavigationProps from './proptypes/NavigationProps';
 
-export default ({navigation}) =>
+const AResourceContainer = ({navigation}) =>
 (
     <AResourceLayout 
         onClickBack={() => navigation.goBack()}
     />
 )
+
+AResourceContainer.propTypes = NavigationProps;
+export default AResourceContainer;

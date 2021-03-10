@@ -14,8 +14,6 @@ export default async () =>
     } 
     catch (error) 
     {
-      if (error && error.message) 
-      {
         switch (error.message) 
         {
             case appleAuthAndroid.Error.NOT_CONFIGURED:
@@ -28,8 +26,7 @@ export default async () =>
                 console.log("User cancelled Apple signin.");
                 break;
             default:
-                throw(err)
+                throw(error)
         }
-      }
     }
 }

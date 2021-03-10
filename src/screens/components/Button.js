@@ -1,18 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { View, TouchableOpacity, TouchableNativeFeedback, Text, Platform, ActivityIndicator } from 'react-native';
 import styles from '../styles'
 
-export default ({title, onPress, loading}) =>
+const Button = ({title, onPress, loading}) =>
 {
     if(loading)
     {
-        const button =
+        const disabledButton =
         ( 
             <View style={styles.button}>
                 <ActivityIndicator color='white'/>
             </View>
         )
-        return button;
+        return disabledButton;
     }
 
     const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
@@ -30,3 +31,11 @@ export default ({title, onPress, loading}) =>
 
     return button;
 }
+
+Button.propTypes =
+{
+    title: PropTypes.string,
+    onPress: PropTypes.func.isRequired,
+    loading: PropTypes.bool
+}
+export default Button;

@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Ionicons';
 
-export default ({name, onPress}) =>
+const IconButton = ({name, onPress}) =>
 (
     <TouchableOpacity onPress={onPress}>
         <Icon
@@ -12,3 +13,10 @@ export default ({name, onPress}) =>
         />
     </TouchableOpacity>
 )
+
+IconButton.propTypes =
+{
+    name: PropTypes.string.isRequired,
+    onPress: PropTypes.func.isRequired
+}
+export default IconButton;
