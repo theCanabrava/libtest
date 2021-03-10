@@ -16,10 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script:
-    echo "$(access_id)"
     npm install
     npm install -g expo-cli
-
 
     npx expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com -f
     npm run upload -- --id $(access_id) --secret $(access_key)
