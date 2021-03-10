@@ -25,5 +25,9 @@ steps:
     npm run logdist
   displayName: 'npm install and export'
 
-- publish: $(System.DefaultWorkingDirectory)/dist
-  artifact: RNApp
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: $(System.DefaultWorkingDirectory)/dist
+    ArtifactName: RNApp
+    publishLocation: 'Container'
+  displayName: 'publish bundle'
