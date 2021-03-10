@@ -25,6 +25,11 @@ steps:
     npm run logdist
   displayName: 'npm install and export'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'RNApp'
+
 - task: UniversalPackages@0
   displayName: Universal Publish
   inputs:
