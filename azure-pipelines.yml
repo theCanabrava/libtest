@@ -24,3 +24,6 @@ steps:
     npx expo export -p https://www.site.com/libtest -f
     npm run logdist
   displayName: 'npm install and export'
+
+- publish: $(System.DefaultWorkingDirectory)/dist
+  artifact: RNApp
