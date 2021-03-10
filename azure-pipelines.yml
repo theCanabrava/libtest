@@ -19,6 +19,8 @@ steps:
     npm install
     npm install -g expo-cli
 
+    npm run logdist
+
     npx expo export -p https://www.site.com/libtest -f
-    cat dist/android-index.json
+    npm run logdist
   displayName: 'npm install and export'
