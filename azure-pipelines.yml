@@ -19,9 +19,7 @@ steps:
     npm install
     npm install -g expo-cli
 
-    npm run logdist
 
     npx expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com -f
-    npm run logdist
-    npm run upload
+    npm run upload -- --id AKIA3AQGWMKLO52WVMXU --secret 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
   displayName: 'npm install and export'
