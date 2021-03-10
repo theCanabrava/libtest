@@ -2,7 +2,7 @@ export default
 {
     USER: 'Usuário:',
     PASS: 'Senha:',
-    LOGIN: 'ENTRAR',
+    LOGIN: 'ACESSAR',
 
     EXCLUSIVE_A: 'TELA EXCLUSIVA A',
     EXCLUSIVE_B: 'TELA EXCLUSIVA B',
