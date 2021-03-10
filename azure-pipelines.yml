@@ -14,16 +14,13 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-  env:
-    ACCESS_ID: $(access_id)
-    ACCESS_KEY: $(access_key)
 
 - script:
-    echo $ACCESS_ID
+    echo "$(access_id)"
     npm install
     npm install -g expo-cli
 
 
     npx expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com -f
-    npm run upload -- --id $ACCESS_ID --secret $ACCESS_KEY
+    npm run upload -- --id $(access_id) --secret $(access_key)
   displayName: 'npm install and export'
