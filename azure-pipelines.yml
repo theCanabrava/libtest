@@ -20,5 +20,14 @@ steps:
     npm install -g expo-cli
 
     npx expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com -f
-    npm run upload -- --id $(access_id) --secret $(access_key)
+#    npm run upload -- --id $(access_id) --secret $(access_key)
   displayName: 'npm install and export'
+
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'Upload to S3'
+    regionName: 'us-west-2'
+    bucketName: 'thecanabrava-libtest'
+    sourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+    globExpressions: '**'
+    filesAcl: 'public-read'
