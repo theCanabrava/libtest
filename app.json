@@ -9,7 +9,7 @@
     "slug": "libtest",
     "sdkVersion": "40.0.0",
     "assetBundlePatterns": [
-      "assets/images/*"
+      "assets/images/**/*"
     ]
   }
 }
