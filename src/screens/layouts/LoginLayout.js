@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import PropTypes from 'prop-types';
-import { Text, View, KeyboardAvoidingView, Platform } from 'react-native';
+import { Text, View, KeyboardAvoidingView, Platform, Image } from 'react-native';
 import { GoogleSigninButton } from '@react-native-community/google-signin';
 import { AppleButton } from '@invertase/react-native-apple-authentication';
 
