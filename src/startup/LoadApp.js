@@ -13,14 +13,14 @@ export default ({component}) =>
         const load = async () =>
         {
             await auth.load();
-            try
+            /*try
             {
                 await Asset.loadAsync(Images);
             }
             catch(err)
             {
                 console.log(err);
-            }
+            }*/
             setLoading(false);
         };
 
