@@ -1,9 +1,6 @@
 {
   "name": "libtest",
   "displayName": "libtest",
-  "assetBundlePatterns": [
-    "assets/images/*"
-  ],
   "expo": {
     "name": "libtest",
     "slug": "libtest",
