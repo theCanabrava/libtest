@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import AuthContext from '../contexts/AuthContext';
 import { Asset } from 'expo-asset';
+import Images from './Images';
 
 export default ({component}) =>
 {
@@ -14,7 +15,7 @@ export default ({component}) =>
             await auth.load();
             try
             {
-                await Asset.loadAsync([require('../../assets/images/red.png'), require('../../assets/images/blue/blue.png')]);
+                await Asset.loadAsync(Images);
             }
             catch(err)
             {
