@@ -64,6 +64,13 @@ const LoginLayout = ({onSubmit, error, loading, onGoogleSignIn, onAppleSignIn}) 
                             onPress={onAppleSignIn}
                         />
                     </View>
+                    <Image
+                        style={{
+                              width: 50,
+                              height: 50,
+                            }}
+                        source={require('../../../assets/images/red.png')}
+                    />
                     </>
                     }
                     {error && 
