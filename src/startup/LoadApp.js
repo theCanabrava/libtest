@@ -14,7 +14,7 @@ export default ({component}) =>
             await auth.load();
             try
             {
-                await Asset.loadAsync(require('../../assets/images/red.png'));
+                await Asset.loadAsync([require('../../assets/images/red.png'), require('../../assets/images/blue/blue.png')]);
             }
             catch(err)
             {
