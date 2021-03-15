@@ -71,6 +71,13 @@ const LoginLayout = ({onSubmit, error, loading, onGoogleSignIn, onAppleSignIn}) 
                             }}
                         source={require('../../../assets/images/red.png')}
                     />
+                    <Image
+                        style={{
+                              width: 50,
+                              height: 50,
+                            }}
+                        source={require('../../../assets/images/blue/blue.png')}
+                    />
                     </>
                     }
                     {error && 
