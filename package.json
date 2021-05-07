@@ -8,6 +8,7 @@
     "start": "react-native start --port=8088",
     "test": "jest --collectCoverage",
     "lint": "eslint -f json -o report.json src/**/*.js",
+    "export-dev": "expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com",
     "logdist": "node logdist.js",
     "upload": "node upload.js"
   },
@@ -40,6 +41,7 @@
     "babel-jest": "^25.5.1",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.22.0",
+    "expo-cli": "^4.4.4",
     "jest": "^25.5.4",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1",

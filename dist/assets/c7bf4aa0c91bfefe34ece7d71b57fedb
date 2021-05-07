@@ -4,6 +4,9 @@
   "expo": {
     "name": "libtest",
     "slug": "libtest",
-    "sdkVersion": "40.0.0"
+    "sdkVersion": "40.0.0",
+    "assetBundlePatterns": [
+      "assets/images/**/*"
+    ]
   }
 }
