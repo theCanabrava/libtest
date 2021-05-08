@@ -12,7 +12,7 @@ variables:
     export_command: lint-master
     bucket_name: thecanabrava-libtest-master
   ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}: 
-    deployTarget: export-dev
+    export_command: export-dev
     bucket_name: thecanabrava-libtest-dev
 
 pool:
