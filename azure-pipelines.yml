@@ -28,7 +28,7 @@ steps:
     npm install
     npm install -g expo-cli
     npm run $(export_command)
-  displayName: '$(export_command) and $(bucket_name)'
+  displayName: '$(export_command)'
 
 #- task: S3Upload@1
 #  inputs:
