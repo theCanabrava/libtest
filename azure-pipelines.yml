@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- $(trigger_branch)
 
 pool:
   vmImage: ubuntu-latest
@@ -18,15 +18,14 @@ steps:
 - script: |
     npm install
     npm install -g expo-cli
-    npm run export-dev
-#    npm run upload -- --id $(access_id) --secret $(access_key)
+    npm run $(export_command)
   displayName: 'npm install and export'
 
 - task: S3Upload@1
   inputs:
     awsCredentials: 'Upload to S3'
     regionName: 'us-west-2'
-    bucketName: 'thecanabrava-libtest'
+    bucketName: '$(bucket_name)'
     sourceFolder: '$(System.DefaultWorkingDirectory)/dist'
     globExpressions: '**'
     filesAcl: 'public-read'
