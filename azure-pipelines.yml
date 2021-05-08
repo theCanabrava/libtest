@@ -22,11 +22,11 @@ steps:
     npm run $(export_command)
   displayName: 'npm install and export'
 
-- task: S3Upload@1
-  inputs:
-    awsCredentials: 'Upload to S3'
-    regionName: 'us-west-2'
-    bucketName: '$(bucket_name)'
-    sourceFolder: '$(System.DefaultWorkingDirectory)/dist'
-    globExpressions: '**'
-    filesAcl: 'public-read'
+#- task: S3Upload@1
+#  inputs:
+#    awsCredentials: 'Upload to S3'
+#    regionName: 'us-west-2'
+#    bucketName: '$(bucket_name)'
+#    sourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+#    globExpressions: '**'
+#    filesAcl: 'public-read'
