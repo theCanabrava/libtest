@@ -8,7 +8,9 @@
     "start": "react-native start --port=8088",
     "test": "jest --collectCoverage",
     "lint": "eslint -f json -o report.json src/**/*.js",
+    "lint-master": "eslint src/**/*.js",
     "export-dev": "expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com",
+    "export": "expo export -p https://thecanabrava-libtest.s3-us-west-2.amazonaws.com",
     "logdist": "node logdist.js",
     "upload": "node upload.js"
   },

@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import AuthContext from '../contexts/AuthContext';
-import { Asset } from 'expo-asset';
-import Images from './Images';
 
 export default ({component}) =>
 {
