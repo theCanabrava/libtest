@@ -7,6 +7,14 @@ trigger:
 - master
 - dev
 
+variables:
+  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}: 
+    export_command: lint-master
+    bucket_name: thecanabrava-libtest-master
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}: 
+    deployTarget: export-dev
+    bucket_name: thecanabrava-libtest-dev
+
 pool:
   vmImage: ubuntu-latest
 
@@ -20,7 +28,7 @@ steps:
     npm install
     npm install -g expo-cli
     npm run $(export_command)
-  displayName: 'npm install and export'
+  displayName: '$(export_command) and $(bucket_name)'
 
 #- task: S3Upload@1
 #  inputs:
