@@ -8,13 +8,13 @@ trigger:
  - dev
 
 variables:
- export: $(cmd-$(Build.SourceBranchName))
+ export: cmd-$(Build.SourceBranchName)
 
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
-  displayName: '$(export)'
+  displayName: '$($(export))'
 
 #variables:
 #  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}: 
